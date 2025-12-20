@@ -1,20 +1,38 @@
 import React from "react";
-import bannerImg from "../../assets/photo-C8q0KQHG.webp";
-const ProjectCard = ({ title, main }) => {
+import { IoArrowForward } from "react-icons/io5";
+
+const ProjectCard = ({ title, main, points, image }) => {
   return (
-    <div className="p-3 md:p-6 flex flex-col w-80 bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl">
-      <img className="p-4" src={bannerImg} alt="" />
-      <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal">
-        {title}
-      </h3>
-      <p className="px-4 text-sm md:text-md leading-tight py-2">{main}</p>
-      <div className="mt-2 p-2 md:p-4 flex gap-2 md:gap-4">
-        <button className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
-          Demo
-        </button>
-        <button className="md:mt-10 text-white py-2 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
-          Source Code
-        </button>
+    <div className="w-full bg-[#0c0e19] bg-opacity-40 border border-white/10 
+    shadow-xl shadow-black/40 rounded-3xl backdrop-blur-xl p-6 md:p-10">
+
+      <div className="flex flex-col md:flex-row gap-10 items-start">
+
+        {/* LEFT SIDE IMAGE */}
+        <img
+          src={image}
+          alt=""
+          className="w-full md:w-2/5 h-72 md:h-80 object-cover rounded-2xl shadow-lg"
+        />
+
+        {/* RIGHT SIDE CONTENT */}
+        <div className="flex flex-col md:w-3/5">
+          <h3 className="text-xl md:text-3xl font-bold mb-4">{title}</h3>
+
+          <p className="text-sm md:text-lg text-gray-300 leading-relaxed mb-4">
+            {main}
+          </p>
+
+          <ul className="space-y-3 mt-2">
+            {points?.map((point, index) => (
+              <li key={index} className="flex gap-3">
+                <IoArrowForward size={22} className="text-[#7fa8ff] mt-1" />
+                <span className="text-gray-300 text-sm md:text-md">{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
       </div>
     </div>
   );

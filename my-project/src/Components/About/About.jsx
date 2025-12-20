@@ -1,62 +1,84 @@
 import React from "react";
-import AboutImg from "../../assets/7358653-removebg-preview.png";
+import AboutImg from "../../assets/image2.jpeg";
 import { IoArrowForward } from "react-icons/io5";
+
 const About = () => {
   return (
     <div
       id="About"
-      className="text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12"
+      className="scroll-mt-32 p-10 md:p-24 text-white bg-gradient-to-br from-black/60 to-black/30 backdrop-blur-xl shadow-2xl rounded-3xl border border-white/10 mx-5 md:mx-20"
     >
-      <div>
-        <h2 className="text-2xl md:text-4xl font-bold">About</h2>
-        <div className="md:flex flex-wrap flex-col md:flex-row items-center">
-          <img className="md:h-80" src={AboutImg} alt="About img" />
+      <div className="md:flex items-start gap-12">
 
-          <ul>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
+        {/* LEFT SIDE IMAGE */}
+        <div className="md:w-1/2 flex justify-center">
+          <img
+            className="h-80 w-80 md:h-[420px] md:w-[420px] object-cover rounded-3xl shadow-2xl border border-white/10 hover:scale-105 duration-300"
+            src={AboutImg}
+            alt="About"
+          />
+        </div>
 
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Frontend developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores explicabo deserunt asperiores quasi, vitae blanditiis
-                  perferendis quos consectetur ea harum! Libero aut qui
-                  similique recusandae provident consectetur sed itaque alias
-                  sint ipsa?
-                </p>
+        {/* RIGHT SIDE CONTENT */}
+        <div className="md:w-1/2 space-y-8">
+
+          {/* HEADING */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-wide">
+              About Me
+            </h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-[#7fa8ff] to-[#465697] rounded-full mt-2"></div>
+          </div>
+
+          {/* ABOUT PARAGRAPH */}
+          <p className="text-md md:text-lg leading-relaxed text-gray-200">
+            I am a hardworking and dedicated individual with a strong passion for
+            learning and personal growth. As an HR and Product Management student,
+            I strive to understand people, solve problems, and build meaningful
+            experiences. I also guide students on developing confidence, a
+            positive mindset, and long-term motivation.
+            <br /><br />
+            My goal is to inspire others while growing into impactful roles in HR,
+            product management, and people development.
+          </p>
+
+          {/* DIVIDER */}
+          <div className="border-t border-white/10"></div>
+
+          {/* POINTS SECTION */}
+          <ul className="space-y-5">
+            <li className="flex gap-3">
+              <IoArrowForward size={22} className="mt-1 text-[#7fa8ff]" />
+              <span className="text-gray-300 text-sm md:text-md">
+                Strong passion for continuous personal and professional growth.
               </span>
-            </div>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
-
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Database developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores
-                </p>
+            </li>
+            <li className="flex gap-3">
+              <IoArrowForward size={22} className="mt-1 text-[#7fa8ff]" />
+              <span className="text-gray-300 text-sm md:text-md">
+                Skilled at motivating students & building positive mindset habits.
               </span>
-            </div>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
-
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Backend developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores explicabo deserunt asperiores quasi, vitae blanditiis
-                  perferendis
-                </p>
+            </li>
+            <li className="flex gap-3">
+              <IoArrowForward size={22} className="mt-1 text-[#7fa8ff]" />
+              <span className="text-gray-300 text-sm md:text-md">
+                Interest in HR, People Operations, Product Strategy & User Behavior.
               </span>
-            </div>
+            </li>
+            <li className="flex gap-3">
+              <IoArrowForward size={22} className="mt-1 text-[#7fa8ff]" />
+              <span className="text-gray-300 text-sm md:text-md">
+                Strong communication, empathy, and leadership qualities.
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <IoArrowForward size={22} className="mt-1 text-[#7fa8ff]" />
+              <span className="text-gray-300 text-sm md:text-md">
+                Passionate about understanding people & improving human experiences.
+              </span>
+            </li>
           </ul>
+
         </div>
       </div>
     </div>

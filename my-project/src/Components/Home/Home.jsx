@@ -1,24 +1,50 @@
 import React from "react";
-import avatarImg from "../../assets/7358602-removebg-preview.png";
+import avatarImg from "../../assets/image1.jpeg";
 import TextChange from "../TextChange";
 
 const Home = () => {
   return (
-    <div className="text-white flex w-full justify-between items-start p-10 md:p-20">
-      <div className="md:w-2/4 md:pt-10 ">
-        <h1 className="text-xl md:text-6xl font-bold flex leading-normal tracking-tighter">
+    <div
+      id="home"
+      className="text-white flex flex-col md:flex-row justify-center items-center min-h-screen px-8 md:px-20 py-12
+        bg-gradient-to-br from-blue-900 to-[#7A8FD9]"
+    >
+      <div className="md:w-2/4 md:pr-16 flex flex-col justify-center">
+        <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight leading-tight mb-4">
           <TextChange />
         </h1>
-        <p className="text-sm md:text-2xl tracking-tight ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
-          doloremque?
+
+        <p className="text-base md:text-xl tracking-wide mb-6 max-w-xl">
+          People are at the heart of every successful product. With a passion for 
+          Product Management and precision in strategy, I aim to build products 
+          that thrive on empathy, innovation, and meaningful impact.
         </p>
-        <button className="mt-5 md:md-10 text-white py02 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
-          Contact Me
-        </button>
+
+        <div className="flex gap-6">
+          <a
+            href="#contact"
+            className="text-white bg-[#5A6DC3] py-3 px-7 rounded-full text-base font-semibold 
+              shadow-lg transition transform hover:scale-105 hover:bg-[#7A8FD9]"
+          >
+            Contact Me
+          </a>
+
+          <a
+            href="https://drive.google.com/file/d/1TCydiiBCLhw_zFBfhuCrGqOYr7vY5AZz/view"
+            className="text-white bg-[#5A6DC3] py-3 px-7 rounded-full text-base font-semibold 
+              shadow-lg transition transform hover:scale-105 hover:bg-[#7A8FD9]"
+          >
+            Resume
+          </a>
+        </div>
       </div>
-      <div>
-        <img className="" src={avatarImg} alt="" />
+
+      <div className="mt-12 md:mt-0 md:w-2/4 flex justify-center">
+        <img
+          className="w-64 md:w-96 rounded-3xl shadow-2xl object-cover"
+          src={avatarImg}
+          alt="avatar"
+        />
       </div>
     </div>
   );
