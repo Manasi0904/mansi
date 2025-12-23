@@ -15,9 +15,16 @@ const Home = () => {
         </h1>
 
         <p className="text-base md:text-xl tracking-wide mb-6 max-w-xl">
-          People are at the heart of every successful product. With a passion for 
-          Product Management and precision in strategy, I aim to build products 
-          that thrive on empathy, innovation, and meaningful impact.
+          People are at the heart of every successful product and organization. 
+          With a strong passion for Product Management and Human Resources, 
+          and a precision-driven approach to strategy, I aim to build products 
+          and workplaces that thrive on empathy, innovation, and meaningful 
+          impact. I believe effective HR practices—such as talent development, 
+          employee engagement, and performance management—are essential for 
+          building strong teams and a positive work culture that drives 
+          sustainable business growth.”
+          
+          
         </p>
 
         <div className="flex gap-6">
